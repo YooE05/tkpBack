@@ -1,0 +1,61 @@
+GET http://localhost:3000/users
+
+
+###
+
+POST   http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "username": "ksush2",
+    "password": "11111",
+    "name":"Ksush",
+    "surname": "Karap"
+}
+
+###
+
+DELETE    http://localhost:3000/users
+
+###
+
+POST    http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "username": "Mario4",
+    "password": "222"
+}
+
+###
+
+POST   http://localhost:3000/users/update/personal
+Content-Type: application/json
+
+{
+    "username": "Mario4",
+    "password": "222",
+    "newName":"Kawasaki",
+    "newSurname": "Kago"
+}
+
+###
+
+POST   http://localhost:3000/users/update/password
+Content-Type: application/json
+
+{
+    "username": "Mario4",
+    "password": "2322",
+   "newPassword": "1111"
+}
+
+
+###
+POST  http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "username": "Mario4",
+    "password": "1111"
+}
