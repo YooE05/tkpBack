@@ -1,6 +1,7 @@
 class InitUserData {
-    constructor(name, surname, crntlvl)
+    constructor(accessToken, name, surname, crntlvl)
     {
+        this.accessToken = accessToken;
         this.name = name;
         this.surname=surname;
         this.crntlvl=crntlvl;

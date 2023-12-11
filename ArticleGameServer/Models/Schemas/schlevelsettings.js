@@ -4,9 +4,9 @@ const mongoose = require('mongoose')
 const SchLevelSettings = new mongoose.Schema(
     {
         levelNum: { type: Number, required: true },
-        easyTaskCnt: { type: Number, default: 0  },
-        mediumTaskCnt: { type: Number, default: 0 },
-        hardTaskCnt: { type: Number, default: 0  }
+        easyTasksCnt: { type: Number, default: 0  },
+        mediumTasksCnt: { type: Number, default: 0 },
+        hardTasksCnt: { type: Number, default: 0  }
     }
 )
 

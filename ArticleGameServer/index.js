@@ -1,13 +1,19 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const userRouter = require('./Routes/userroutes')
+const userAccountRouter = require('./Routes/useraccountroutes')
+const userProgressRouter = require('./Routes/userprogressroutes')
+const levelRouter = require('./Routes/levelroutes')
+
+require('dotenv').config()
 
 const mongoConnect = 'mongodb+srv://yooe05:jQFOmyX7yuYlUUbS@cluster0.1wcxsck.mongodb.net/?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 3000
 const app = express()
 
 app.use(express.json())
-app.use(userRouter)
+app.use(userAccountRouter)
+app.use(userProgressRouter)
+app.use(levelRouter)
 
 const con = mongoose.connect(mongoConnect)
     .then(() => { console.log("connect sucsess") })

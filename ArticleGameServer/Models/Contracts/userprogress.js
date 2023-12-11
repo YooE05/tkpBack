@@ -1,7 +1,6 @@
 class UserProgress {
-    constructor(username, points, crntLvl,timeStamp)
+    constructor(points, crntLvl, timeStamp)
     {
-        this.username = username;
         this.points=points;
         this.crntLvl=crntLvl;
         this.timeStamp = timeStamp;

@@ -1,11 +1,11 @@
-const UserCreds = require('./UserCreditionals')
+const UserCreds = require('./usercreditionals')
+const UserPersonal = require('./userpersonaldata')
 
 class UserRegistrationData {
-    constructor(userCreds, name, surname)
+    constructor(userCreds, userPersonal)
     {
         this.userCreds = userCreds;
-        this.name=name;
-        this.surname=surname;
+        this.userPersonal = userPersonal;
     }
 }
 
