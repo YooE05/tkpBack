@@ -16,7 +16,7 @@ POST   http://localhost:3000/users/create
 Content-Type: application/json
 
 {
-    "username": "ksush",
+    "username": "23",
     "password": "11111",
     "name":"Ksush",
     "surname": "Karap"
@@ -24,7 +24,7 @@ Content-Type: application/json
 
 ###
 
-GET    http://localhost:3000/users/getLeaderobard
+GET    http://localhost:3000/users/leaders
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtzdXNoIiwiaWF0IjoxNzAyMjg5NTY1fQ.Ry1XPETUsgaTI7IWO3zkK6-NgUJgqo6tIKZGKrPiWN4
 Content-Type: application/json
 
@@ -80,13 +80,13 @@ Content-Type: application/json
 
 ###
 POST    http://localhost:3000/users/update/progress
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtzdXNoIiwiaWF0IjoxNzAyMjE2MzU2fQ.kyL9xq_HjPg46DTAXiRZnj4iMDJSX31NwLjx_UsBQts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1zYmVhc3QiLCJpYXQiOjE3MDMwODMzMTh9.j0yfh11JTxZkM3JRGI2lZ41kWFIWjWqNzmOnoXFNnNk
 Content-Type: application/json
 
 {
     "points":"2",
-    "crntLvl": "1",
-    "timeStamp": "2023-12-11T13:00:00"
+    "crntLvl": "0",
+    "timeStamp": "2023-12-20T14:24:06"
 }
 
 

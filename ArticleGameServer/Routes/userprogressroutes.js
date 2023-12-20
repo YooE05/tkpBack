@@ -6,7 +6,7 @@ const { validateAccessToken } = require('../jwtutils')
 
 
 userProgressRouter.post('/users/update/progress', validateAccessToken, updateProgress)
-userProgressRouter.get('/users/getLeaderobard', validateAccessToken, getLeaders)
+userProgressRouter.get('/users/leaders', validateAccessToken, getLeaders)
 
 //dev
 

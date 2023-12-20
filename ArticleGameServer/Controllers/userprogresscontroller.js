@@ -11,23 +11,26 @@ const updateProgress = async (req, res) => {
                                             req.body.crntLvl,
                                             req.body.timeStamp)    
 
+
     await SchUserPersonalData.findOne({ username: req.body.username })
         .then(async (progressData) => 
         {
+
             progressData.$inc('points', newPogressData.points)
             progressData.crntLvl = newPogressData.crntLvl 
             progressData.timeStamp = new FormatUtils().FormatStringToSeconds(newPogressData.timeStamp)
 
             progressData.save()
                 .then(() => {
+
                     res.status(200).send("Progress data was updated");
                 })
                 .catch(() => {
-                    return res.status(400).send(`Progress wasn't updated : ${error}`)
+                    return res.status(401).send(`Progress wasn't updated : ${error}`)
                 })
                     })  
         .catch(() => {
-            return res.status(400).send(`Progress wasn't updated`)
+            return res.status(404).send(`Progress wasn't updated`)
         })
 }
 

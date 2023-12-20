@@ -23,16 +23,13 @@ const createUser = async (req, res) => {
 
     schUserCreds.save()
     .then(async() => {
-
-        //let strDate = new FormatUtils().FormatSecondsToString(new Date())
-
         const schUserPersonal = new SchUserPersonalData({
             username: regData.userCreds.username,
             name: regData.userPersonal.name,
             surname:  regData.userPersonal.surname,
             points: 0,
             crntlvl: 0,
-            timeStamp: new Date().toUTCString()
+            timeStamp: Date.now()
         })
 
         schUserPersonal.save().catch(async (error) => {
@@ -45,7 +42,7 @@ const createUser = async (req, res) => {
 
     }).catch(async (error) => {
         console.error(error)
-        res.status(500).send("Error while creating user creds")
+        res.status(404).send("Error while creating user creds")
       })
 
 }
@@ -62,7 +59,7 @@ const authUser = async (req, res) => {
                     .then((userPersonal) => {    
                         console.log(1)
                             const accessToken = getNewAccessToken(creds.username); 
-                            let initUserData = new InitUserData(accessToken, userPersonal.name, userPersonal.surname, userPersonal.crntlvl )
+                            let initUserData = new InitUserData(accessToken, userPersonal.name, userPersonal.surname, userPersonal.crntLvl )
 
                             console.log(accessToken)
                             res.status(200).send(initUserData);
@@ -75,7 +72,7 @@ const authUser = async (req, res) => {
 
         })
         .catch(() => {
-            return res.status(400).send('Can not find user')
+            return res.status(404).send('Can not find user')
         })
 
 }
@@ -95,11 +92,11 @@ const updatePersonalData = async (req, res) => {
                     res.status(200).send("Personal data was updated");
                 })
                 .catch(() => {
-                    return res.status(400).send(`Data wasn't updated : ${error}`)
+                    return res.status(401).send(`Data wasn't updated : ${error}`)
                 })
                     })  
         .catch(() => {
-            return res.status(400).send('Cannot find user')
+            return res.status(404).send('Cannot find user')
         })
 }
 
