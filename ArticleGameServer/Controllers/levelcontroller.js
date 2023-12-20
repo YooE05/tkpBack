@@ -5,7 +5,7 @@ const getLevelData = async (req, res) => {
 
     //проверить валидность входящих данных
 
-    await servGetPersonalData(req).then(async (personData) => 
+    await servGetPersonalData(req.body.username).then(async (personData) => 
     { 
         await servGetLevelSettings(personData.crntLvl).then(async (levelSettings) => 
         {

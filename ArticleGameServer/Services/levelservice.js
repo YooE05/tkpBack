@@ -4,10 +4,10 @@ const SchLevelSettings = require('../Models/Schemas/schlevelsettings')
 
 const ArticleTask = require('../Models/Contracts/articletask')
 
-const servGetPersonalData = async (req)=> {
+const servGetPersonalData = async (enterUsername)=> {
 
     //из базы берутся все пользователи, найти способ брать индекс пришедшего массива элементов
-    return await SchUserPersonalData.findOne({username:req.body.username});
+    return await SchUserPersonalData.findOne({username: enterUsername});
 }
 
 const servGetLevelSettings = async (crntLvl) =>{

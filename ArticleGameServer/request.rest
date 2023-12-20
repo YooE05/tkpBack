@@ -38,8 +38,8 @@ POST    http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "username": "ksush",
-    "password": "11111"
+    "username": "ma123",
+    "password": "111"
 }
 
 ###
@@ -80,7 +80,7 @@ Content-Type: application/json
 
 ###
 POST    http://localhost:3000/users/update/progress
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1zYmVhc3QiLCJpYXQiOjE3MDMwODMzMTh9.j0yfh11JTxZkM3JRGI2lZ41kWFIWjWqNzmOnoXFNnNk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hMTIzIiwiaWF0IjoxNzAzMTA5MDQ1fQ.JA7G4HYmsMV7p8mpdyubO2z8ZjS9r488L2LHktE00YI
 Content-Type: application/json
 
 {
