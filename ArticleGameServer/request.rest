@@ -16,9 +16,9 @@ POST   http://localhost:3000/users/create
 Content-Type: application/json
 
 {
-    "username": "23",
-    "password": "11111",
-    "name":"Ksush",
+    "username": "kkk",
+    "password": "111111",
+    "name":"asdddsd",
     "surname": "Karap"
 }
 
