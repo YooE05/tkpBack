@@ -1,15 +1,15 @@
-const { servGetLevelTasks, servGetLevelSettings, servGetPersonalData  } = require('../Services/levelservice')
+const { servGenerateLevelTasks, servGetLevelSettings, servGetPersonal  } = require('../Services/levelservice')
 
 
 const getLevelData = async (req, res) => {
 
     //проверить валидность входящих данных
 
-    await servGetPersonalData(req.body.username).then(async (personData) => 
+    await servGetPersonal(req.body.username).then(async (personData) => 
     { 
         await servGetLevelSettings(personData.crntLvl).then(async (levelSettings) => 
         {
-            await servGetLevelTasks(levelSettings, req.body.maxTasksInRoom).then(async (tasksForGame) => 
+            await servGenerateLevelTasks(levelSettings, req.body.maxTasksInRoom).then(async (tasksForGame) => 
             { 
             
                 res.status(200).send(JSON.stringify(tasksForGame)); 

@@ -4,7 +4,7 @@ const SchLevelSettings = require('../Models/Schemas/schlevelsettings')
 
 const ArticleTask = require('../Models/Contracts/articletask')
 
-const servGetPersonalData = async (enterUsername)=> {
+const servGetPersonal = async (enterUsername)=> {
 
     //из базы берутся все пользователи, найти способ брать индекс пришедшего массива элементов
     return await SchUserPersonalData.findOne({username: enterUsername});
@@ -120,6 +120,6 @@ async function loadLevelTasks(countOfCrntTasks, crntDifficulty, maxCountOfTasks)
 
 module.exports = {
     servGetLevelSettings, 
-    servGetLevelTasks: servGenerateLevelTasks,
-    servGetPersonalData
+    servGenerateLevelTasks,
+    servGetPersonal
 }

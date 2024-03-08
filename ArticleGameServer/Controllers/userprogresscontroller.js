@@ -4,16 +4,16 @@
 // const LeaderBoardUser = require('../Models/Contracts/leaderboarduser')
 // const UserProgress = require('../Models/Contracts/userprogress')
 
-const {   servGetProgressData,
+const {   servGetProgress,
     servUpdateProgress,
     servGenerateLeaderboard,
     servGetTop10,
-    servGetPersonalDatas } = require('../Services/userprogressservice')
+    servGetPersonals } = require('../Services/userprogressservice')
 
 
 const updateProgress = async (req, res) => {
     
-    await servGetProgressData(req.body.username).then(async (progressData) => 
+    await servGetProgress(req.body.username).then(async (progressData) => 
         {
             await servUpdateProgress(progressData, req).then(() => {
                     res.status(200).send("Progress data was updated");
@@ -28,9 +28,8 @@ const updateProgress = async (req, res) => {
 }
 
 const getLeaders = async (req, res) => {
-
    
-    await servGetPersonalDatas().then(async (userPersonalAll) => 
+    await servGetPersonals().then(async (userPersonalAll) => 
     {          
         await servGetTop10().then(async (userPersonalTop) => 
         {

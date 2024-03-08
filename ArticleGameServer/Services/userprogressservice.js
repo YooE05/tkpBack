@@ -4,7 +4,7 @@ const FormatUtils = require('../formatutils')
 const LeaderBoardUser = require('../Models/Contracts/leaderboarduser')
 const UserProgress = require('../Models/Contracts/userprogress')
 
-const servGetProgressData = async (reqUsername) => {
+const servGetProgress = async (reqUsername) => {
 
     return await SchUserPersonalData.findOne({ username: reqUsername })
 }
@@ -22,7 +22,7 @@ const servUpdateProgress = async (progressData, req) =>
     } 
 
 
-const servGetPersonalDatas = async () => {
+const servGetPersonals = async () => {
         //из базы берутся все пользователи, найти способ брать индекс пришедшего массива элементов
         return await SchUserPersonalData.find({}).sort({ points: -1,  timeStamp: 1})
 }
@@ -60,9 +60,9 @@ const servGenerateLeaderboard = async (username, userPersonalAll, userPersonalTo
 
 
 module.exports = {
-    servGetProgressData,
+    servGetProgress,
     servUpdateProgress,
     servGenerateLeaderboard,
     servGetTop10,
-    servGetPersonalDatas
+    servGetPersonals
 }

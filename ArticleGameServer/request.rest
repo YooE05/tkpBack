@@ -38,32 +38,32 @@ POST    http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "username": "ma123",
-    "password": "111"
+    "username": "se123",
+    "password": "111111"
 }
 
 ###
 POST    http://localhost:3000/users/update/personal
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtzdXNoIiwiaWF0IjoxNzAyMjE2MzU2fQ.kyL9xq_HjPg46DTAXiRZnj4iMDJSX31NwLjx_UsBQts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlMTIzIiwiaWF0IjoxNzAzNjcyNDE3fQ.D5PPF6_tVMMPXUWZNgyRbKfwqh-bY75Uk__KcDWgtjU
 Content-Type: application/json
 
 {
-     "name":"gay",
+    "name":"gay",
     "surname": "gayskiy"
 }
 
 ###
 POST    http://localhost:3000/users/update/password
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtzdXNoIiwiaWF0IjoxNzAyMjE3NTU5fQ.fVSi_4qwjZ4ZBwTvLB70EktRCvAZdJOueNUa9XSg9_0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlMTIzIiwiaWF0IjoxNzAzNjcyNDE3fQ.D5PPF6_tVMMPXUWZNgyRbKfwqh-bY75Uk__KcDWgtjU
 Content-Type: application/json
 
 {
-    "newPassword": "222"
+    "newPassword": "111111"
 }
 
 ###
 DELETE http://localhost:3000/users/deleteuser
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtzdXNoIiwiaWF0IjoxNzAyMjE3NTU5fQ.fVSi_4qwjZ4ZBwTvLB70EktRCvAZdJOueNUa9XSg9_0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNsMTIzIiwiaWF0IjoxNzAzNjc4NjEyfQ.8NEbeT5W72-XrwECwU2-5auceO45bv-SGLYj5zDwVjQ
 Content-Type: application/json
 
 {
